@@ -20,9 +20,9 @@
 # return true or false based on whether the entire sequence array has been traversed
 
 
+
+
 def isValidSubsequence(array, sequence):
-    # Write your code here.
-    
     arrIdx = 0
 	seqIdx = 0
 	
@@ -31,4 +31,11 @@ def isValidSubsequence(array, sequence):
 			seqIdx += 1
 		arrIdx += 1
 	return seqIdx == len(sequence)
+
+
+# n is the length of input array
+
+# time complexity: O(n)
+
+# space complexity: O(1) no extra storage needed
 			
