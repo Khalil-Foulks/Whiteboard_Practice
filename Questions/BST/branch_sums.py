@@ -1,3 +1,5 @@
+# https://www.algoexpert.io/questions/Branch%20Sums
+
 # input 
 # tree node
 
@@ -55,3 +57,10 @@ def sum_helper(node, total, ans):
 		return
 	sum_helper(node.left, new_total, ans)
 	sum_helper(node.right, new_total, ans)
+
+
+# n is the number of nodes
+
+# time complexity - O(n)
+
+# space complexity - O(n)
