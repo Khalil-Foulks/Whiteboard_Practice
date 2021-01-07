@@ -1,9 +1,6 @@
 #https://www.algoexpert.io/questions/Depth-first%20Search
 
-# Do not edit the class below except
-# for the depthFirstSearch method.
-# Feel free to add new properties
-# and methods to the class.
+
 class Node:
     def __init__(self, name):
         self.children = []
