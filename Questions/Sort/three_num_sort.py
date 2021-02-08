@@ -53,3 +53,9 @@ def threeNumberSort(array, order):
 			thirdIdx -= 1
 			
 	return array
+
+# time complexity - O(n)
+    # where n is the length of array
+
+# space Complexity - O(1)
+    # constant; swapping done in place; no extra space used
