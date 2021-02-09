@@ -14,3 +14,9 @@ def isPalindrome(string):
 		right -= 1
 	# if every character matched return True
 	return True
+
+# Time Complexity - O(n)
+    # where n is the length of array
+
+# Space Complexity - O(1)
+    # not extra space needed for check
