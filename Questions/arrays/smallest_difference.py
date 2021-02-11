@@ -19,8 +19,7 @@ def smallestDifference(arrayOne, arrayTwo):
 	for i in arrayOne:
 		for j in arrayTwo:
 			if abs(i - j) <=  minDif:
-				ans[0] = i
-				ans[1] = j
+				ans = [i,j]
 				minDif = abs(i - j)
 	return ans
 
