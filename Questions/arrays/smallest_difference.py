@@ -12,16 +12,16 @@
             # min dif become abs(num1 - num2)
 
 
-def smallestDifference(arrayOne, arrayTwo):
-	minDif = abs(max(arrayOne) - max(arrayTwo))
-	ans = [0,0]
+# def smallestDifference(arrayOne, arrayTwo):
+# 	minDif = abs(max(arrayOne) - max(arrayTwo))
+# 	ans = [0,0]
 	
-	for i in arrayOne:
-		for j in arrayTwo:
-			if abs(i - j) <=  minDif:
-				ans = [i,j]
-				minDif = abs(i - j)
-	return ans
+# 	for i in arrayOne:
+# 		for j in arrayTwo:
+# 			if abs(i - j) <=  minDif:
+# 				ans = [i,j]
+# 				minDif = abs(i - j)
+# 	return ans
 
 # Time Complexity - O(n^2)
 # Space Complexity - O(1)
@@ -47,18 +47,21 @@ def smallestDifference(arrayOne, arrayTwo):
     # reset idx counter to 0 and continue looping
 
 
-# def smallestDifference(arrayOne, arrayTwo):
-# 	min = abs(max(arrayOne) - max(arrayTwo))
-# 	ans = [0,0]
-# 	idx = 0 
+def smallestDifference(arrayOne, arrayTwo):
+	minDif = abs(max(arrayOne) - max(arrayTwo))
+	ans = [0,0]
+	idx = 0 
 	
-# 	for num in arrayOne:
-# 		while idx != len(arrayTwo):
-# 			numTwo = arrayTwo[idx]
-# 			if abs(num - numTwo) <=  min:
-# 				ans = [num,numTwo]
-# 				min = abs(num - numTwo)
-# 			idx += 1
-# 		idx = 0
+	for num in arrayOne:
+		while idx != len(arrayTwo):
+			numTwo = arrayTwo[idx]
+			if abs(num - numTwo) <=  minDif:
+				ans = [num,numTwo]
+				minDif = abs(num - numTwo)
+			idx += 1
+		idx = 0
 	
-# 	return ans
+	return ans
+
+# Time Complexity - O(n)
+# Space Complexity - O(1)
