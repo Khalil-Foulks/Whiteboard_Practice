@@ -23,5 +23,5 @@ def smallestDifference(arrayOne, arrayTwo):
 				minDif = abs(i - j)
 	return ans
 
-# Time Complexity - O(n)
+# Time Complexity - O(n^2)
 # Space Complexity - O(1)
