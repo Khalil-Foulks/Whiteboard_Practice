@@ -16,14 +16,14 @@
 # return input array
 
 def moveElementToEnd(array, toMove):
-	idx = 0	
+    idx = 0
     for num in array:
-		if array[idx] == toMove:
-			array.pop(idx)
-			array.append(toMove)
-		else:
-			idx += 1
-	return array
+        if array[idx] == toMove:
+            array.pop(idx)
+            array.append(toMove)
+        else:
+            idx += 1
+    return array
 
 # Time Complexity - O(n)
 # Space Complexity - O(1)
