@@ -42,10 +42,10 @@ def reverseWordsInString(string):
 			
 	words.append(string[startOfWord:])
 	
-	reverseList(words)
+	reverse(words)
 	return "".join(words)
 
-def reverse(text):
+def reverse(list):
 	start, end = 0, len(list) - 1
 	while start < end:
 		list[start], list[end] = list[end], list[start]
