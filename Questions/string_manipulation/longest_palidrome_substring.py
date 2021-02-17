@@ -1,3 +1,24 @@
+# -------------------plan----------------------------------------
+
+# init empty longest substring
+# loop through string once to grab start of sub string
+    # loop through again to grab end of substring
+        # init substring
+        # if len substring > len of longest substring and it's a palindrome
+            # longest = substring
+# return longest
+
+# create ispalindrome function
+    # init start idx = 0
+    # init end idx = len - 1
+    
+    # while start < end
+        # if start char in string and  end char in string are not the same
+            # it can't be a palindrome return false 
+        # start += 1
+        # end -= 1
+    # return true 
+
 def longestPalindromicSubstring(string):
 	longest = ''
 	for i in range(len(string)):
