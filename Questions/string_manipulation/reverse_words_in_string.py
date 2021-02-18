@@ -51,3 +51,9 @@ def reverse(list):
 		list[start], list[end] = list[end], list[start]
 		start += 1
 		end -= 1
+
+# Time Complexity: O(n) 
+    # where n is number of characters in string
+
+# Space Complexity: O(n)
+    # where n is number of characters in string
