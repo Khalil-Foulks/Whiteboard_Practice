@@ -1,10 +1,11 @@
+# input string is valid if:
+    # Open brackets must be closed by the same type of brackets.
+    # Open brackets must be closed in the correct order.
+
+# figure out how to keep track of when a type of bracket is used
+# keep track of closing brackets only if a open bracket of same type is b4 it
+
 def isValid(s):
-    # input string is valid if:
-        # Open brackets must be closed by the same type of brackets.
-        # Open brackets must be closed in the correct order.
-    
-    # figure out how to keep track of when a type of bracket is used
-    # keep track of closing brackets only if a open bracket of same type is b4 it
 
     # The stack to keep track of opening brackets.
     stack = []
