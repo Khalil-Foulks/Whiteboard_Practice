@@ -22,5 +22,5 @@ var runningSum = function(nums) {
 /**
     time complexity - O(n) - where n is the # of ints in nums
 
-    space complexity - O(n) - where n is the # of ints in nums
+    space complexity - O(1) - no additional space used
  */
