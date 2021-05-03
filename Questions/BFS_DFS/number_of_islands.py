@@ -34,3 +34,7 @@ class Solution(object):
         self.part_of_island(i,j-1,grid)
         self.part_of_island(i+1,j,grid)
         self.part_of_island(i-1,j,grid)  
+
+# time O(m*n)
+
+# space - O(1)
