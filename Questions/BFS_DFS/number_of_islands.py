@@ -1,6 +1,7 @@
+#---------------Info--------------------------------------------------------
 # find the number of islands in a grid
 # island = a groud of 1's (land) surrounded by 0's (water)
-#-------------------------------------------------------------------------------
+#-----------------------Plan--------------------------------------------------------
 # find out where a land mass starts
 # then figure out how far it expands
 # keep track of where the portion of the land mass ends 
@@ -35,6 +36,6 @@ class Solution(object):
         self.part_of_island(i+1,j,grid)
         self.part_of_island(i-1,j,grid)  
 
-# time O(m*n)
+# time complexity - O(m*n)
 
-# space - O(1)
+# space complexity - O(1)
