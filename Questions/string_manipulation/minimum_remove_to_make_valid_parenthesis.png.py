@@ -19,5 +19,5 @@ def minRemoveToMakeValid(self, s):
     s = delete_invalid_closing(s[::-1], ")", "(")
     return s[::-1]
 
-# time - O(n)
-# space - O(n)
+# time Complexity: O(n)
+# space Complexity: O(n)
