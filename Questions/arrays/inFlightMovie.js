@@ -25,45 +25,26 @@
 
 function canTwoMoviesFillFlight(movieLengths, flightLength) {
 
-    // Determine if two movie runtimes add up to the flight length
-    
-    let movies = {}
-    
-    if(movieLengths.length > 1) {
-        for(let i=0; i < movieLengths.length; i++) {
-            let total = 0
-            let movie1 = movieLengths[i]
+// Movie lengths we've seen so far
+const movieLengthsSeen = new Set();
 
-            if (movie1 >= flightLength) {
-                continue
-            }
-        
-            for(let j=i+1; j < movieLengths.length; j++) {
-                let movie2 = movieLengths[j]
-                total = movie1 + movie2
-                // console.log(total)
+for (let i = 0; i < movieLengths.length; i++) {
+    const firstMovieLength = movieLengths[i];
 
-                if (movie2 >= flightLength) {
-                    continue
-                }
-                
-                if (!(`${total}` in movies)) {
-                    movies[total] = [movie1,movie2]
-                }
-            }     
-        }
-
-        // console.log(movies)
-        if(`${flightLength}` in movies) {
-            return true
-        }
+    const matchingSecondMovieLength = flightLength - firstMovieLength;
+    if (movieLengthsSeen.has(matchingSecondMovieLength)) {
+    return true;
     }
-  
-    return false;
+
+    movieLengthsSeen.add(firstMovieLength);
+}
+
+// We never found a match, so return false
+return false;
 }
 
 canTwoMoviesFillFlight([2, 4, 6], 6);
 
 // where n is # of movies
-//time - O(n)^2
-//space - O(1)
+//time - O(n)
+//space - O(n)
