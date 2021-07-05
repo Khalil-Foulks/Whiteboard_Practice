@@ -9,6 +9,7 @@ function hasPalindromePermutation(theString) {
     } else {
       unpairedCharacters.add(char);
     }
+    // console.log(unpairedCharacters)
   }
 
   // The string has a palindrome permutation if it
@@ -18,3 +19,6 @@ function hasPalindromePermutation(theString) {
 
 // time complexity: O(n)
 // space complexity O(1)
+
+let s = 'tot'
+hasPalindromePermutation(s)
