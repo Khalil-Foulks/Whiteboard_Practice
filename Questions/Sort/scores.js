@@ -1,39 +1,28 @@
 function sortScores(unorderedScores, highestPossibleScore) {
 
-    // Sort the scores in O(n) time
+    // Array of 0s at indices 0..highestPossibleScore
+    const scoreCounts = new Array(highestPossibleScore + 1).fill(0);
   
-    // create didSwap varible set to false
-    // create a loop
-    // create a cur var -> points to cur value
-    // create a next var -> points to next idx if it exists
-    // if cur val is < next grab both values and swap them  set didSwap to true and continue through loop
-    // otherwise do nothing
-    // if gone thorugh entire loop and did a swap then recurssivly call function
-    // otherwise return input arr
-    
-    let didSwap = false
-    
-    if(sortScores.length <= 1){
-      return unorderedScores;
-    }
-    
-    for(let i = 0; i < unorderedScores.length; i++){
-      let cur = unorderedScores[i]
-      let next = unorderedScores[i+1]
-      
-      if (cur < next){
-        didSwap = true
-        unorderedScores[i] = next
-        unorderedScores[i+1] = cur
+    // Populate scoreCounts
+    unorderedScores.forEach(score => {
+      scoreCounts[score]++;
+    });
+  
+    // Populate the final sorted array
+    const sortedScores = [];
+  
+    // For each item in scoreCounts
+    for (let score = highestPossibleScore; score >= 0; score--) {
+      const count = scoreCounts[score];
+  
+      // For the number of times the item occurs
+      for (let time = 0; time < count; time++) {
+        sortedScores.push(score);
       }
     }
-    
-    if(didSwap === true){
-      sortScores(unorderedScores,highestPossibleScore)
-    }
-    
-    return unorderedScores;
+  
+    return sortedScores;
 }
 
-// time complexity - O(n^2)
+// time complexity - O(n)
 // space compexity - O(1)
