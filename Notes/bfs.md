@@ -17,3 +17,15 @@ And so on:
 ![Binary Tree](../images/bfs/bfs_4.png "A Binary Tree")
 
 Until we reach the end. 
+
+## Advantages:
+
+- A BFS will find the shortest path between the starting point and any other reachable node. A depth-first search will not necessarily find the shortest path.
+
+## Disadvantages
+
+- A BFS on a binary tree generally requires more memory than a DFS.
+
+## Uses 
+
+- Queue (FIFO)
