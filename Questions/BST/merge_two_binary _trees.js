@@ -3,7 +3,7 @@ var mergeTrees = function(root1, root2) {
         return root2
     }
 
-    if (root1 === null){
+    if (root2 === null){
         return root1
     }    
 
@@ -13,3 +13,12 @@ var mergeTrees = function(root1, root2) {
 
     return root1
 };
+
+// if root1 is null return root2
+// if root2 is null return root1
+
+// pick dominant tree
+// increment tree 1 by tree 2
+// recursively call merge tree on left side store as dominant tree left
+// recursively call merge tree on right side store as dominant tree right
+// return dominant tree
