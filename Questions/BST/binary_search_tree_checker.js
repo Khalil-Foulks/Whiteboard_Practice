@@ -38,3 +38,22 @@ if(node.value < min || node.value > max){
         // Allow only distinct values
 return (bstCheck(node.left, min, node.value - 1) && bstCheck(node.right, node.value + 1, max))
 }
+
+/* 
+    - Make a check helper function
+        - check if node is empty
+            - if empty return true
+        - if node is < min or node > max
+            - return false; breaks the rules of a BST 
+        - use recursion on left node
+            - arguments; left node, lowest possible min, node - 1 
+        - use recursion on right node
+            - arguments; right node, node + 1, highest possible max
+    
+    - return helper func in main func
+        - params node, min, max
+            - initial min lowest min in js
+            - initial max is highest max in js
+
+    O(n) time and O(n) space
+*/
