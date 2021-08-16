@@ -1,4 +1,4 @@
-# Heap
+# Heap (Priority Queue)
 
 ### A Heap is a **special Tree** based data structure in which the tree is a **complete binary tree**.
 

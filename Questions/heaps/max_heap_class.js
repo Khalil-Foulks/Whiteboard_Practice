@@ -1,7 +1,7 @@
-// MinHeap that starts out empty
+// MaxHeap that starts out empty
 // visualizer https://www.cs.usfca.edu/~galles/visualization/Heap.html
 
-class MinHeap{
+class MaxHeap{
     constructor(){
         this.storage = []
         this.size = 0
@@ -62,8 +62,8 @@ class MinHeap{
     traverseUp(){
         // grabs idx of last node
         let idx = this.size - 1;
-        // if last node's parent exists and the parent value is > last node 
-        while(this.hasParent(idx) && this.parent(idx) > this.storage[idx]){
+        // if last node's parent exists and the parent value is < last node (higher node should move up)
+        while(this.hasParent(idx) && this.parent(idx) < this.storage[idx]){
             // swap the two node and repeat while moving up the tree 
             this.swap(this.getParentIdx, idx)
             idx = this.getParentIdx(idx)
@@ -90,21 +90,21 @@ class MinHeap{
     traverseDown(){
         let idx = 0;
         while(this.hasLeftChild(idx)){
-            let smallestChildIdx = this.getLeftChildIdx(idx)
-            // if right child is smaller than left child; make right child, the smallest child
-            if(this.hasRightChild(idx) && this.rightChild(idx) < this.leftChild(idx)){
-                smallestChildIdx = this.getRightChildIdx(idx)
+            let largestChildIdx = this.getLeftChildIdx(idx)
+            // if right child is larger than left child; make right child, the largest child
+            if(this.hasRightChild(idx) && this.rightChild(idx) > this.leftChild(idx)){
+                largestChildIdx = this.getRightChildIdx(idx)
             }
-            // if root is smaller than child; do nothing
-            if(this.storage[idx] < this.storage[smallestChildIdx]){
+            // if root is larger than child; do nothing
+            if(this.storage[idx] > this.storage[largestChildIdx]){
                 break
             }
-            // else cur node and smallest node need to swap
+            // else cur node and largest node need to swap
             else{
-                this.swap(idx,smallestChildIdx)
+                this.swap(idx,largestChildIdx)
             }
             // repeat going down the tree
-            idx = smallestChildIdx
+            idx = largestChildIdx
         }
     }
 }
