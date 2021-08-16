@@ -9,15 +9,15 @@ class MinHeap{
 
     // helper methods
     getParentIdx(idx){
-        return Math.floor((index - 2) / 2);
+        return Math.floor((idx - 2) / 2);
     }
 
     getLeftChildIdx(idx){
-        return (index * 2) + 1;
+        return (idx * 2) + 1;
     }
 
     getRightChildIdx(idx){
-        return (index * 2) + 2;
+        return (idx * 2) + 2;
     }
 
     hasParent(idx){
@@ -35,15 +35,15 @@ class MinHeap{
     }
 
     parent(idx){
-        return this.storage[this.getParentIdx]
+        return this.storage[this.getParentIdx(idx)]
     }
 
     leftChild(idx){
-        return this.storage[this.getLeftChildIdx]
+        return this.storage[this.getLeftChildIdx(idx)]
     }
 
     rightChild(idx){
-        return this.storage[this.getRightChildIdx]
+        return this.storage[this.getRightChildIdx(idx)]
     }
 
     swap(idx1,idx2){
