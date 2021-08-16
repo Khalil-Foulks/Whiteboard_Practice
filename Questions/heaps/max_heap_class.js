@@ -71,7 +71,7 @@ class MaxHeap{
     }
 
     // removes root node, makes last node the new root and runs traverseDown 
-    removeMin(){
+    removeMax(){
         // check if heap is empty
         if(this.size === 0){
             throw new Error("Cannot remove from empty heap.")
