@@ -1,6 +1,7 @@
 # Heap (Priority Queue)
 
-### A Heap is a **special Tree** based data structure in which the tree is a **complete binary tree**.
+### A Heap is a **special Tree** based data structure in which the tree is a **complete binary tree**. When a problem wants to **repeatedly find the min/max of a array (list)**, while also **inserting into that array (list)**, heaps are often really useful.
+
 
 ## Types  
 -------
