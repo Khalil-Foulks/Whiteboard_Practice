@@ -46,3 +46,11 @@ var reorganizeString = function(s) {
     }
     return res;
 }
+
+/*
+time complexity - O(n) where n is the len of input string
+space complexity - 
+    avg - O(log n) 
+    worst case each char is unique - O(n)
+
+*/
