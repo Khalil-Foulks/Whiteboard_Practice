@@ -1,4 +1,4 @@
-var Node = function(val) {
+let Node = function(val) {
     this.val = val;
     this.next = null;
 };
@@ -6,7 +6,7 @@ var Node = function(val) {
 /**
  * Initialize your data structure here.
  */
-var MyLinkedList = function() {
+let MyLinkedList = function() {
     this.head = null;
     this.tail = null;
     this.size = 0;
@@ -35,6 +35,7 @@ MyLinkedList.prototype.get = function(index) {
 MyLinkedList.prototype.addAtHead = function(val) {
     const newNode = new Node(val);
     
+    // there is no head
     if (!this.head) {
         this.head = newNode;
         this.tail = newNode;
@@ -73,6 +74,7 @@ MyLinkedList.prototype.addAtTail = function(val) {
  */
 MyLinkedList.prototype.addAtIndex = function(index, val) {
     const newNode = new Node(val);
+    // index is out of bounds
     if (index > this.size) return;
     if (index <= 0) {
       return this.addAtHead(val);
@@ -119,8 +121,8 @@ MyLinkedList.prototype.deleteAtIndex = function(index) {
 
 /** 
  * Your MyLinkedList object will be instantiated and called as such:
- * var obj = new MyLinkedList()
- * var param_1 = obj.get(index)
+ * let obj = new MyLinkedList()
+ * let param_1 = obj.get(index)
  * obj.addAtHead(val)
  * obj.addAtTail(val)
  * obj.addAtIndex(index,val)
