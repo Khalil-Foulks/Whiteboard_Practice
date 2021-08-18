@@ -39,3 +39,8 @@ let getIntersectionNode = function(headA, headB) {
     return pointerA
 };
 
+/* 
+    where N is the length of list A and M is the length of list B.
+    time - O(N + M)
+    space - O(1)
+*/
