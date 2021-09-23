@@ -39,6 +39,6 @@ let findMaxSlidingWindow = function(arr, windowSize) {
 };
 
 /* 
-    runtime O(n): n = array size
-    space O(w): w = window size
+  time complexity O(n): n = array size
+  space complexity O(w): w = window size
 */
