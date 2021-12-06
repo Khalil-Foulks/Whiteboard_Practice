@@ -25,4 +25,8 @@ function fruits_into_baskets(fruits) {
   
     return maxLength;
 }
-  
+
+/* 
+  time complexity O(n): n = array size
+  space complexity O(1)
+*/
