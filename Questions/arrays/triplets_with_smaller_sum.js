@@ -24,3 +24,8 @@ function search_pair(arr, target_sum, first) {
   }
   return count;
 }
+
+/* 
+  time complexity O(n^3) 
+  space complexity O(n) 
+*/
