@@ -53,6 +53,9 @@ function transform(value){
 */
 
 /* 
-  time complexity O(n^3) 
-  space complexity O(n) 
+    Time Complexity: 
+                    O(N lg N + P) 
+                    N = hi - lo 
+                    P = a maxinum value of power(x)
+    Space Complexity: O(P)
 */
