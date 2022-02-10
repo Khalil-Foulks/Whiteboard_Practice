@@ -54,8 +54,8 @@ function transform(value){
 
 /* 
     Time Complexity: 
-                    O(N lg N + P) 
-                    N = hi - lo 
-                    P = a maxinum value of power(x)
-    Space Complexity: O(P)
+                    O(nlogn + p) 
+                    n = hi - lo 
+                    p = a maxinum value of power(x)
+    Space Complexity: O(p)
 */
