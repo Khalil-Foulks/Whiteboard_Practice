@@ -1,4 +1,7 @@
 function clockAngle(hour, minute){
+    if (hour < 0 || minute < 0){
+      throw "Hour or Minute MUST BE greater than or equal to 0"
+    }
     if (hour === 12){
       hour = 0
     }
