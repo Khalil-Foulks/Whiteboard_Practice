@@ -1,6 +1,6 @@
 var romanToInt = function(s) {
 
-    const sym = { 
+    const conversion = { 
         'I': 1,
         'V': 5,
         'X': 10,
@@ -13,8 +13,8 @@ var romanToInt = function(s) {
     let result = 0;
 
     for (i=0; i < s.length; i++){
-        const cur = sym[s[i]];
-        const next = sym[s[i+1]];
+        const cur = conversion[s[i]];
+        const next = conversion[s[i+1]];
 
         if (cur < next){
             result += next - cur // IV -> 5 - 1 = 4
