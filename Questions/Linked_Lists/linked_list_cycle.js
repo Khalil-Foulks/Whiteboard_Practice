@@ -17,3 +17,8 @@ const has_cycle = function(head) {
     }
   return false;
 }
+
+/* 
+    time complexity O(n): where ‘N’ is the total number of nodes in the LinkedList
+    space complexity O(1)
+*/
