@@ -22,6 +22,6 @@ function find_square_sum(num) {
 }
 
 /* 
-    time complexity O(n): where ‘N’ is the total number of nodes in the LinkedList
+    time complexity O(logN)
     space complexity O(1)
 */
