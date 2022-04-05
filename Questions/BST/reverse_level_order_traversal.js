@@ -1,15 +1,36 @@
 class TreeNode {
-
-    constructor(value) {
-        this.value = value;
+    constructor(val) {
+        this.val = val;
         this.left = null;
-        this.right = null; 
+        this.right = null;
     }
-};
+}
 
-const traverse = function(root) {
-    result = [];
-    // TODO: Write your code here
+
+function traverse(root) {
+    const result = [];
+    if (root === null) {
+        return result;
+    }
+    const queue = [];
+    queue.push(root);
+    while (queue.length > 0) {
+        levelSize = queue.length;
+        currentLevel = [];
+        for (i = 0; i < levelSize; i++) {
+            currentNode = queue.shift();
+            // add the node to the current level
+            currentLevel.push(currentNode.val);
+            // insert the children of current node in the queue
+            if (currentNode.left !== null) {
+                queue.push(currentNode.left);
+            }
+            if (currentNode.right !== null) {
+                queue.push(currentNode.right);
+            }
+        }
+        result.unshift(currentLevel);
+    }
     return result;
 }
 
@@ -23,6 +44,6 @@ const traverse = function(root) {
 
 
 /* 
-    time complexity
-    space complexity
+    time complexity O(N)
+    space complexity O(N)
 */
